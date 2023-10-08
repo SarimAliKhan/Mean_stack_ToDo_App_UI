@@ -1,0 +1,17 @@
+<h1>To-Do List</h1>
+
+<mat-list>
+  <mat-list-item *ngFor="let todo of todos">
+    <mat-checkbox checked="{{todo.isDone}}" (change)="markTodoAsDone(todo)"></mat-checkbox>
+    <mat-label>{{todo.task}}</mat-label>
+    <button mat-icon-button (click)="deleteTodo(todo)">
+      <mat-icon>delete</mat-icon>
+    </button>
+  </mat-list-item>
+</mat-list>
+<!-- 
+<mat-form-field appearance="outline">
+  <mat-label>New todo</mat-label>
+  <mat-input type="text" ></mat-input>
+</mat-form-field>
+<mat-button mat-flat-button color="primary" (click)="addTodo()">Add</mat-button> -->
