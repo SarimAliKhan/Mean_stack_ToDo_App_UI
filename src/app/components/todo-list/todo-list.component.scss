@@ -1,0 +1,62 @@
+.todo-app {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+    padding: 10px;
+  }
+  
+  .add-todo {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .mat-form-field {
+    flex-grow: 1;
+  }
+  
+  .mat-raised-button {
+    margin-left: 10px;
+  }
+  
+  .mat-list {
+    padding-top: 0;
+  }
+  
+  .mat-list-item {
+    width: 100%;
+  }
+  
+  .mat-icon-button {
+    position: absolute;
+    right: 10px;
+  }
+  
+  .mat-checkbox {
+    color: #ccc;
+  }
+  
+  .mat-checkbox:hover {
+    color: #000;
+  }
+  
+  .mat-icon-button {
+    color: #ccc;
+  }
+  
+  .mat-icon-button:hover {
+    color: #000;
+  }
+  
+  .mat-raised-button:hover {
+    background-color: #ccc;
+  }
+  
+  .todo-app {
+    margin: 0 auto;
+    width: 50%;
+  }
+
+  
