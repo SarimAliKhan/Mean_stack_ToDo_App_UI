@@ -1,22 +1,38 @@
 <div class="todo-app">
   <div class="todo_data">
-  <h1>To-Do List</h1>
-  <div class="add-todo">
-    <mat-form-field>
-      <input matInput [(ngModel)]="newTodo" placeholder="Add a new task" />
-    </mat-form-field>
-    <button mat-raised-button color="primary" (click)="addTodo()">Add</button>
+    <h1>To-Do List</h1>
+    <div className="add-todo">
+      <mat-form-field>
+        <input matInput [(ngModel)]="newTodo" placeholder="Add a new task" />
+      </mat-form-field>
+      <button mat-raised-button color="primary" (click)="addTodo()">Add</button>
+    </div>
+    <mat-list>
+      <ng-container *ngFor="let todo of todos">
+        <mat-list-item
+          [class.done]="todo.isDone"
+          [@taskRemoved]
+          *ngIf="!todo.isDone"
+        >
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="mr-6">
+              <mat-checkbox
+                [(ngModel)]="todo.isDone"
+                (change)="markTodoAsDone(todo)"
+              ></mat-checkbox>
+              <span>{{ todo.task }}</span>
+            </div>
+            <button
+              mat-icon-button
+              color="warn"
+              class="dustbin"
+              (click)="deleteTodo(todo)"
+            >
+              <mat-icon>delete</mat-icon>
+            </button>
+          </div>
+        </mat-list-item>
+      </ng-container>
+    </mat-list>
   </div>
-  <mat-list>
-    <ng-container *ngFor="let todo of todos">
-      <mat-list-item [class.done]="todo.isDone" [@taskRemoved] *ngIf="!todo.isDone">
-        <mat-checkbox [(ngModel)]="todo.isDone" (change)="markTodoAsDone(todo)"></mat-checkbox>
-        <span>{{ todo.task }}</span>
-        <button mat-icon-button color="warn" class="dustbin" (click)="deleteTodo(todo)">
-          <mat-icon></mat-icon>
-        </button>
-      </mat-list-item>
-    </ng-container>
-  </mat-list>
-</div>
 </div>

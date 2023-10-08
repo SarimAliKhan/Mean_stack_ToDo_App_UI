@@ -10,16 +10,19 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatIconModule } from '@angular/material/icon';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import {MatCardModule} from '@angular/material/card';
 import { FormsModule } from '@angular/forms';
 import {MatSnackBar, MatSnackBarRef, MatSnackBarModule} from '@angular/material/snack-bar';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { LoginComponent } from './components/login/login.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ToDoListComponent,
+    LoginComponent,
     
   ],
   imports: [
@@ -35,7 +38,8 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
     MatCheckboxModule,
     MatIconModule,
     MatFormFieldModule,
-    MatSnackBarModule 
+    MatSnackBarModule,
+    MatCardModule
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [],

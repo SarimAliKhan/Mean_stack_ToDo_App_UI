@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ToDoApp';
+  constructor(private router: Router) { }
+
+  ngOnInit(): void {
+    // Redirect the user to the login page
+    this.router.navigate(['/login']);
+    
+  }
 }
+
+

@@ -22,6 +22,7 @@ export class TodoService {
   }
 
   deleteTodo(todo: Todo) {
-    return this.httpClient.delete('http://localhost:8000/api/todos/' + todo._id);
+    debugger
+    return this.httpClient.delete('http://localhost:8000/api/todos/delete/' + todo._id);
   }
 }
