@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {}
 
   login() {
-    
+    debugger
     this.errorMessage = '';
   
     this.authService.login(this.username, this.password).subscribe((data) => {

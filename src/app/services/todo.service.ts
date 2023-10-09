@@ -5,24 +5,25 @@ import { Todo } from '../models/Todo.model';
 @Injectable({
   providedIn: 'root'
 })
+//service classes
 export class TodoService {
 
   constructor(private httpClient: HttpClient) { }
 
   getAllTodos() {
-    return this.httpClient.get('http://localhost:8000/api/todos/getAll');
+    return this.httpClient.get('https://mean-stack-to-do-ho1ibwbks-sarimalikhans-projects.vercel.app/api/todos/getAll');
   }
 
   createTodo(todo: Todo) {
-    return this.httpClient.post('http://localhost:8000/api/todos/save', todo);
+    return this.httpClient.post('https://mean-stack-to-do-ho1ibwbks-sarimalikhans-projects.vercel.app/api/todos/save', todo);
   }
 
   markTodoAsDone(todo: Todo) {
-    return this.httpClient.put('http://localhost:8000/api/todos/' + todo._id,todo);
+    return this.httpClient.put('https://mean-stack-to-do-ho1ibwbks-sarimalikhans-projects.vercel.app/api/todos/' + todo._id,todo);
   }
 
   deleteTodo(todo: Todo) {
-    debugger
-    return this.httpClient.delete('http://localhost:8000/api/todos/delete/' + todo._id);
+    
+    return this.httpClient.delete('https://mean-stack-to-do-ho1ibwbks-sarimalikhans-projects.vercel.app/api/todos/delete/' + todo._id);
   }
 }
