@@ -11,19 +11,19 @@ export class TodoService {
   constructor(private httpClient: HttpClient) { }
 
   getAllTodos() {
-    return this.httpClient.get('https://mean-stack-to-do-ho1ibwbks-sarimalikhans-projects.vercel.app/api/todos/getAll');
+    return this.httpClient.get('https://api-ten-pied.vercel.app/api/todos/getAll');
   }
 
   createTodo(todo: Todo) {
-    return this.httpClient.post('https://mean-stack-to-do-ho1ibwbks-sarimalikhans-projects.vercel.app/api/todos/save', todo);
+    return this.httpClient.post('https://api-ten-pied.vercel.app/api/todos/save', todo);
   }
 
   markTodoAsDone(todo: Todo) {
-    return this.httpClient.put('https://mean-stack-to-do-ho1ibwbks-sarimalikhans-projects.vercel.app/api/todos/' + todo._id,todo);
+    return this.httpClient.put('https://api-ten-pied.vercel.app/api/todos/' + todo._id,todo);
   }
 
   deleteTodo(todo: Todo) {
     
-    return this.httpClient.delete('https://mean-stack-to-do-ho1ibwbks-sarimalikhans-projects.vercel.app/api/todos/delete/' + todo._id);
+    return this.httpClient.delete('https://api-ten-pied.vercel.app/api/todos/delete/' + todo._id);
   }
 }

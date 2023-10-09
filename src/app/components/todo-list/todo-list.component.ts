@@ -42,7 +42,7 @@
         this.todos = todos;
       });
     }
-
+    
     addTodo(): void {
       const todo: Todo = {
         task: this.newTodo,

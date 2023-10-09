@@ -10,6 +10,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
+  //var initialization
   username: string = '';
   password: string = '';
   errorMessage: any;
@@ -18,14 +19,17 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {}
 
   login() {
-    debugger
+    
     this.errorMessage = '';
-  
+    //call login
+    
     this.authService.login(this.username, this.password).subscribe((data) => {
-      
-      this.snackBar.open('You have successfully logged in!');
+      debugger  
+      //this.snackBar.open('You have successfully logged in!');
       this.router.navigate(['/todo']);
+      //notify
     }, (error) => {
+      console.log(error);
       this.errorMessage = "invalid password or email";
   
       timer(1500).subscribe(() => {
